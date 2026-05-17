@@ -1,0 +1,5 @@
+name: apm-python-expert-fullstack
+version: 1.0.0
+description: Guidelines for managing polyglot fullstack monorepos (Backend & Frontend).
+author: stephanie
+includes: auto

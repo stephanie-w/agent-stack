@@ -1,0 +1,11 @@
+name: apm-engineering-standards
+version: 1.0.0
+description: Universal engineering standards for version control, task tracking, and releases.
+author: stephanie
+includes: auto
+scripts:
+  commit: opencode --prompt .apm/prompts/commit.prompt.md
+  commit-copilot: copilot --prompt .apm/prompts/commit.prompt.md --allow-tool='shell(git:*)'
+  create-pr: opencode --prompt .apm/prompts/create-pr.prompt.md
+  review-pr: opencode --prompt .apm/prompts/review-pr.prompt.md
+  onboard-developer: opencode --prompt .apm/prompts/onboard-developer.prompt.md

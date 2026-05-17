@@ -1,0 +1,5 @@
+name: apm-python-expert-workspace
+version: 1.0.0
+description: Guidelines for managing Python monorepos using uv workspaces.
+author: stephanie
+includes: auto

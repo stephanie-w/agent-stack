@@ -1,0 +1,5 @@
+name: apm-core-meta-rapid
+version: 1.0.0
+description: High-speed development protocols for rapid prototyping (High Velocity).
+author: stephanie
+includes: auto

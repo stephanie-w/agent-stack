@@ -1,0 +1,5 @@
+name: apm-engineering-standards-full
+version: 1.0.0
+description: Rich task lifecycle management and thought process tracking rules.
+author: stephanie
+includes: auto

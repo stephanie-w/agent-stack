@@ -1,0 +1,5 @@
+name: apm-core-meta-standard
+version: 1.0.0
+description: Standard operational behaviors and safety protocols for AI agents (High Rigor).
+author: stephanie
+includes: auto

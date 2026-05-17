@@ -1,0 +1,5 @@
+name: apm-product-discovery
+version: 1.0.0
+description: Upstream tools for product design, PRD generation, and vertical slicing.
+author: stephanie
+includes: auto

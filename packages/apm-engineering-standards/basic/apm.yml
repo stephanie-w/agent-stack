@@ -1,0 +1,5 @@
+name: apm-engineering-standards-basic
+version: 1.0.0
+description: Simple checklist-style task tracking rules for rapid development.
+author: stephanie
+includes: auto

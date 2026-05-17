@@ -1,0 +1,5 @@
+name: apm-python-expert
+version: 1.0.0
+description: Domain-specific depth for Python engineering, security, and performance.
+author: stephanie
+includes: auto

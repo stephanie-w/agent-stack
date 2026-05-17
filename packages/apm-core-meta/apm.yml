@@ -1,0 +1,7 @@
+name: apm-core-meta
+version: 1.0.0
+description: Behavioral meta-skills and standards discovery tools for agents.
+author: stephanie
+includes: auto
+scripts:
+  analyze-bug: opencode --prompt .apm/prompts/analyze-bug.prompt.md
