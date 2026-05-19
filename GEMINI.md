@@ -53,6 +53,11 @@ Primitives are located in `.apm/` subdirectories within each package:
 *   Use `LOAD <skill_name>` within the prompt to trigger a skill.
 *   Use `${input:variable_name}` for parameterization.
 
+## Agent Interactions & Analysis
+
+*   **Context Efficiency:** When analyzing primitives (skills, agents, instructions), read *only* the frontmatter initially to understand the content and save context tokens. Do not read the entire file unless explicitly needed for a task.
+*   **Architectural Changes:** Always present a clear plan and ask for user confirmation *before* executing any cross-package file moves, architectural restructurings, or other significant modifications.
+
 ## Project Structure (Summary)
 
 ```text
