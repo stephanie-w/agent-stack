@@ -4,6 +4,7 @@ description: Universal engineering standards for version control, task tracking,
 author: stephanie
 includes: auto
 scripts:
+  analyze-bug: opencode --prompt .apm/prompts/analyze-bug.prompt.md
   commit: opencode --prompt .apm/prompts/commit.prompt.md
   commit-copilot: copilot --prompt .apm/prompts/commit.prompt.md --allow-tool='shell(git:*)'
   create-pr: opencode --prompt .apm/prompts/create-pr.prompt.md
