@@ -57,7 +57,7 @@ Primitives are located in `.apm/` subdirectories within each package:
 
 ```text
 packages/
-├── apm-core-meta/               # Behavioral meta-skills and architecture
+├── apm-core-meta/               # Behavioral meta-skills, architecture, and standards discovery
 ├── apm-engineering-standards/   # Git workflows, release rules, and onboarding
 ├── apm-python-expert/           # Python deep-dives and repo structures
 └── apm-product-discovery/       # Upstream planning tools (write-a-prd, grill-me, etc.)

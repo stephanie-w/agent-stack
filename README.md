@@ -14,8 +14,8 @@ packages/
 │   ├── .apm/
 │   │   ├── agents/              # Persona: Backend Developer
 │   │   ├── instructions/        # Base: Agent Safety & Integrity
-│   │   ├── prompts/             # Hybrid Prompts: code-mentor, analyze-bug, etc.
-│   │   └── skills/              # reflect, make-skill, task-management, improve-codebase-architecture
+│   │   ├── prompts/             # code-mentor, analyze-bug, discover-standards, inject-standards, index-standards
+│   │   └── skills/              # reflect, make-skill, task-management, improve-codebase-architecture, discover-standards, inject-standards, index-standards
 │   ├── standard/                # FLAVOR: High Rigor Ops
 │   └── rapid/                   # FLAVOR: High Velocity Ops
 │

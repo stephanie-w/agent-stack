@@ -5,3 +5,6 @@ author: stephanie
 includes: auto
 scripts:
   analyze-bug: opencode --prompt .apm/prompts/analyze-bug.prompt.md
+  discover-standards: opencode --prompt .apm/prompts/discover-standards.prompt.md
+  inject-standards: opencode --prompt .apm/prompts/inject-standards.prompt.md
+  index-standards: opencode --prompt .apm/prompts/index-standards.prompt.md
