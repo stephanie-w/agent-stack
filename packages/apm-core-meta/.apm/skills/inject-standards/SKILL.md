@@ -1,5 +1,5 @@
 ---
-name: "Inject Standards"
+name: inject-standards
 description: "Context-aware workflow for injecting relevant technical standards into active conversations, plans, or new skills."
 ---
 

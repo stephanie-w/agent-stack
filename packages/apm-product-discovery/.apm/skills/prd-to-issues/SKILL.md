@@ -1,14 +1,6 @@
 ---
 name: prod-to-issues
-type: skill
-category: management
 description: Decomposes Product Requirements Documents into independent, end-to-end vertical slices (tracer bullets) as actionable GitHub issues.
-compatibility: universal
-tags:
-  - planning
-  - mvp
-  - agile
-  - vertical-slices
 ---
 
 # PRD to Issues

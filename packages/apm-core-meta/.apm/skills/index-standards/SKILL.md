@@ -1,11 +1,7 @@
 
 ---
-name: "Index Standards"
-type: "instruction"
-category: "meta"
+name: index-standards
 description: "Automation workflow for maintaining a searchable index of standards, ensuring discoverability for injection tools."
-compatibility: "universal"
-tags: ["automation", "standards", "meta", "indexing"]
 ---
 
 

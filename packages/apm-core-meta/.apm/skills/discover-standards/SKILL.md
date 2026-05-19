@@ -1,5 +1,5 @@
 ---
-name: "Discover Standards"
+name: discover-standards
 description: "Interactive workflow for extracting tribal knowledge and implicit patterns from a codebase into documented standards."
 ---
 

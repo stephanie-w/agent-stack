@@ -1,12 +1,7 @@
 ---
-name: "Plan Product"
-type: "instruction"
-category: "management"
+name: plan-product
 description: "Interactive session for establishing foundational product documentation, including mission, roadmap, and tech stack."
-compatibility: "universal"
-tags: ["planning", "mvp", "discovery", "product-design"]
 ---
-
 
 Establish foundational product documentation through an interactive conversation. Creates mission, roadmap, and tech stack files in `product/`.
 

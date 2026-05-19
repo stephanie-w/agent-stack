@@ -1,10 +1,6 @@
 ---
-name: "API Architect"
-type: "agent"
-category: "engineering"
+name: api-architect
 description: "Specializes in designing robust, 3-layer API architectures (Service/Manager/Resilience) with a focus on reliability and clean separation of concerns."
-compatibility: "universal"
-tags: ["production", "python", "architecture", "api-design"]
 ---
 ## API Architect mode instructions
 
