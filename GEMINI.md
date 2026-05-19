@@ -10,13 +10,14 @@ This monorepo is organized into **Layers** and **Flavors** to prevent context bl
 
 ### Architecture: Layers & Flavors
 
-1.  **`apm-core-meta`**: The "How to Agent" layer. Contains meta-skills like Code Mentor, Architecture improvement, and Safety Protocols.
+1.  **`apm-agent-ops`**: The "Behavior" layer. Core operational rules, safety protocols, and conversational patterns.
     *   *Flavors*: `standard` (High Rigor) vs `rapid` (High Velocity).
-2.  **`apm-engineering-standards`**: The "Base" layer. Universal rules for Git workflows and releases.
+2.  **`apm-core-meta`**: The "How to Agent" layer. Contains meta-skills for agents to index standards, self-improve, or critique architecture.
+3.  **`apm-engineering-standards`**: The "Base" layer. Universal rules for Git workflows and releases.
     *   *Flavors*: `full` (Stateful tracking) vs `basic` (Checklist tracking).
-3.  **`apm-python-expert`**: The "Domain & Structure" layer. Deep language-specific standards, security audits, and project layout principles.
+4.  **`apm-python-expert`**: The "Domain & Structure" layer. Deep language-specific standards, security audits, and project layout principles.
     *   *Flavors*: `fullstack` (Polyglot) vs `workspace` (Pure Python workspaces).
-4.  **`apm-product-discovery`**: The "Upstream" layer. Idea-to-code tools (PRD writing, Grill Me).
+5.  **`apm-product-discovery`**: The "Upstream" layer. Idea-to-code tools (PRD writing, Grill Me).
 
 ## Core Primitives
 

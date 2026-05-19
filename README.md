@@ -6,30 +6,34 @@ Instead of monolithic, "do-everything" packages, these packages are segmented by
 
 ## Project Structure
 
-The monorepo is organized into four logic layers, each containing a core package and optional "flavor" sub-packages.
+The monorepo is organized into five logic layers, each containing a core package and optional "flavor" sub-packages.
 
 ```text
 packages/
-├── apm-core-meta/               # THE "HOW TO AGENT" LAYER
+├── apm-agent-ops/               # THE "BEHAVIOR" LAYER
 │   ├── .apm/
-│   │   ├── agents/              # Persona: Backend Developer
 │   │   ├── instructions/        # Base: Agent Safety & Integrity
-│   │   ├── prompts/             # code-mentor, analyze-bug, discover-standards, inject-standards, index-standards
-│   │   └── skills/              # reflect, make-skill, task-management, improve-codebase-architecture, discover-standards, inject-standards, index-standards
+│   │   ├── prompts/             # code-mentor
+│   │   └── skills/              # ask-user, code-mentor
 │   ├── standard/                # FLAVOR: High Rigor Ops
 │   └── rapid/                   # FLAVOR: High Velocity Ops
+│
+├── apm-core-meta/               # THE "HOW TO AGENT" LAYER
+│   └── .apm/
+│       ├── prompts/             # discover-standards, inject-standards, index-standards
+│       └── skills/              # reflect, make-skill, improve-codebase-architecture, discover-standards, inject-standards, index-standards
 │
 ├── apm-engineering-standards/   # THE "BASE" LAYER
 │   ├── .apm/
 │   │   ├── instructions/        # Base: Git Workflow
-│   │   ├── prompts/             # commit, create-pr, review-pr, onboard-developer
-│   │   └── skills/              # Release Manager
+│   │   ├── prompts/             # commit, create-pr, review-pr, onboard-developer, analyze-bug
+│   │   └── skills/              # Release Manager, task-management
 │   ├── full/                    # FLAVOR: Stateful Task Tracking
 │   └── basic/                   # FLAVOR: Checklist Task Tracking
 │
 ├── apm-python-expert/           # THE "DOMAIN & STRUCTURE" LAYER
 │   ├── .apm/
-│   │   ├── agents/              # Personas: API Architect, Security Auditor
+│   │   ├── agents/              # Personas: API Architect, Security Auditor, Backend Developer
 │   │   ├── instructions/        # Python & Python Security standards
 │   │   └── skills/              # Code Critic, Security Auditor
 │   ├── fullstack/               # FLAVOR: Polyglot Monorepo
@@ -45,15 +49,16 @@ packages/
 
 ## The Layered Architecture
 
-To prevent "context bloat" and ensure agents only load the rules they need, the packages are divided into four distinct layers. Some layers offer **flavors**—mutually exclusive sub-packages for different development philosophies.
+To prevent "context bloat" and ensure agents only load the rules they need, the packages are divided into five distinct layers. Some layers offer **flavors**—mutually exclusive sub-packages for different development philosophies.
 
-1. **`apm-core-meta`**: The "How to Agent" layer. Meta-skills like Code Mentor, Standards Discovery, and Architecture improvement.
+1. **`apm-agent-ops`**: The "Behavior" layer. Core operational rules, safety protocols, and conversational patterns.
    - *Flavors*: `standard` (High Rigor) vs `rapid` (High Velocity).
-2. **`apm-engineering-standards`**: The "Base" layer. Universal rules for Git and releases.
+2. **`apm-core-meta`**: The "How to Agent" layer. Meta-skills for agents to index standards, self-improve, or critique architecture.
+3. **`apm-engineering-standards`**: The "Base" layer. Universal rules for Git, releases, and task tracking.
    - *Flavors*: `full` (Stateful tracking) vs `basic` (Simple checklists).
-3. **`apm-python-expert`**: The "Domain & Structure" layer. Language-specific depth (Security, FastAPI) and project layout rules.
+4. **`apm-python-expert`**: The "Domain & Structure" layer. Language-specific depth (Security, FastAPI) and project layout rules.
    - *Flavors*: `fullstack` (Polyglot) vs `workspace` (Pure Python workspaces).
-4. **`apm-product-discovery`**: The "Upstream" layer. Idea-to-code tools (PRD writing, Grill Me).
+5. **`apm-product-discovery`**: The "Upstream" layer. Idea-to-code tools (PRD writing, Grill Me).
 
 ---
 
@@ -104,7 +109,7 @@ dependencies:
     
     # Discovery tools and high-rigor operational standards
     - stephanie/apm-core-meta
-    - stephanie/apm-core-meta/standard
+    - stephanie/apm-agent-ops/standard
 ```
 
 ### 2. The "Daily Driver" (Day N)
@@ -120,6 +125,7 @@ dependencies:
     
     # Domain rules for Python
     - stephanie/apm-python-expert
+    - stephanie/apm-agent-ops/standard
 ```
 
 ### 3. The "Junior / Onboarding" Stack
@@ -132,7 +138,7 @@ dependencies:
     - stephanie/apm-engineering-standards
     - stephanie/apm-engineering-standards/full
     - stephanie/apm-python-expert
-    - stephanie/apm-core-meta # Includes 'code-mentor' skill
+    - stephanie/apm-agent-ops # Includes 'code-mentor' skill
 ```
 
 ### 4. The "Senior / Proof of Concept" Stack
@@ -146,7 +152,7 @@ dependencies:
     - stephanie/apm-product-discovery
     
     # High-velocity operational mode + simple task checklists
-    - stephanie/apm-core-meta/rapid
+    - stephanie/apm-agent-ops/rapid
     - stephanie/apm-engineering-standards/basic
 ```
 

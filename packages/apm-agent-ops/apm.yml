@@ -1,0 +1,7 @@
+name: apm-agent-ops
+version: 1.0.0
+description: Core operational rules, safety protocols, and conversational patterns for AI agents.
+author: stephanie
+includes: auto
+scripts:
+  code-mentor: opencode --prompt .apm/prompts/code-mentor.prompt.md
