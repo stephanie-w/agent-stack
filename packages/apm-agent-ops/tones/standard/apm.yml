@@ -1,0 +1,5 @@
+name: apm-agent-ops-tone-standard
+version: 1.0.0
+description: Standard Tone instructions for balanced agent communication.
+author: stephanie
+includes: auto

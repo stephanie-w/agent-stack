@@ -16,7 +16,11 @@ packages/
 │   │   ├── prompts/             # code-mentor
 │   │   └── skills/              # ask-user, code-mentor
 │   ├── standard/                # FLAVOR: High Rigor Ops
-│   └── rapid/                   # FLAVOR: High Velocity Ops
+│   ├── rapid/                   # FLAVOR: High Velocity Ops
+│   └── tones/                   # FLAVORS: Agent Communication Style
+│       ├── caveman/             # Ultra-minimal token usage
+│       └── standard/            # Balanced context and brevity
+
 │
 ├── apm-core-meta/               # THE "HOW TO AGENT" LAYER
 │   └── .apm/
@@ -75,6 +79,7 @@ To maintain a high-quality, composable ecosystem, all contributors must follow t
 *   **Composability**: Always start titles with `##` (H2). APM folds multiple files into one; H2 prevents broken header hierarchies in the final `AGENTS.md`.
 *   **Frontmatter**: Must include a `description` (one-line summary) and `applyTo` (glob pattern or `"*"` for global).
 *   **Scope**: Use instructions for **Policies** ("The Laws of the Repo"). Keep them concise to avoid context bloat.
+*   **Mutual Exclusivity**: Never place contradictory instructions (e.g., two different tones or operational paces) in the same directory. Always use nested flavor packages to force the user to select exactly one via `apm.yml`.
 
 ### 3. Writing Agents (`.agent.md`)
 *   **Persona-Driven**: Use agents for **Specializations** ("The Expert"). Define "Who" the agent is, what tools it has access to, and what model it should use.

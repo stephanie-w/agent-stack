@@ -44,6 +44,7 @@ Primitives are located in `.apm/` subdirectories within each package:
 *   **Frontmatter**: Must include `description` and `applyTo: "*"`.
 *   **Headers**: Always start titles with `##` (H2). This ensures correct hierarchy when files are concatenated.
 *   **Ordering**: Use numeric prefixes (e.g., `00-base.md`, `01-security.md`) to control the merge order.
+*   **Mutual Exclusivity**: Never place contradictory instructions (e.g., two different tones or operational paces) in the same directory. Always use nested flavor packages to ensure APM does not compile contradictory behavior.
 
 ### 2. Skill Folders
 *   Each skill must have a `SKILL.md` file.

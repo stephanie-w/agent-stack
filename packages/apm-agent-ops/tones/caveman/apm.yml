@@ -1,0 +1,5 @@
+name: apm-agent-ops-tone-caveman
+version: 1.0.0
+description: Caveman Tone instructions for ultra-minimal agent communication.
+author: stephanie
+includes: auto
